@@ -5,7 +5,10 @@ public class HotDrink extends Product {
 
     public HotDrink(String name, int price, int drinkTemper) {
         super(name, price);
-        this.drinkTemper = drinkTemper;
+        if (drinkTemper < 18) {
+            this.drinkTemper = 18;
+        } else
+            this.drinkTemper = drinkTemper;
     }
 
     public int getDrinkTemper() {
